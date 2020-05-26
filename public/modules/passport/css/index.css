@@ -1,0 +1,67 @@
+html,body{width:100%;height:100%;background-color: #FFF;}
+body.user{background-color: #FAFAFA;}
+
+#login {width: 100%;height: 100%;}
+
+/* 头部 */
+.house-header{width: 100%;height: 10%}
+.house-header .layui-container{overflow: hidden; transition: all 400ms ease-out;}
+.house-header .house-banner{position: absolute; top: 0; line-height: 50px;}
+.house-header .house-banner a.banner{display: inline-block; width: 100px;margin-top:10px;}
+.house-header .house-banner a.banner img{width: 100%;}
+
+/* 尾部 */
+.house-footer{width: 100%;bottom:0; position: absolute;height: 4%}
+.house-footer .about{text-align: center;}
+.house-footer .about p{margin-top: 5px;}
+
+/* 登录页面 */
+#house-login{background: url(../img/load_bg1.jpg)  no-repeat center center;width: 100%;display: block;height: 90%}
+.layui-space{width: 100%;height: 15%;}
+#house-login .layui-form{width: 300px; height: 440px;padding: 0 30px 0 30px;margin:0px auto;background-color: #FFF; box-shadow: 0 0 0 10px rgba(255,255,255,0.3);}
+#house-login .layui-form .log-type {margin: 0px auto;text-align: center}
+#house-login .layui-form .log-type a{font-size: 20px; line-height: 100px; text-align: center;margin:0 10px;cursor: pointer;color: #999}
+#house-login .layui-form .log-type a.active{color: #dabb92}
+#house-login .layui-form .layui-input-block{margin-left: 0;}
+#house-login .layui-form .layui-input-block input{height: 50px; padding-left: 15px; color: #999; margin-bottom: 20px;}
+#house-login .layui-form .layui-input-block.login i{position: absolute; top: 9px; left: 10px; font-size: 30px; color: #AAA;}
+#house-login .layui-form .layui-input-block.login input{padding-left: 40px;}
+#house-login .layui-form .layui-input-block.vercode input{width: 165px;float: left}
+#house-login .layui-form .layui-input-block.vercode img{float: right}
+#house-login .layui-form .layui-input-block.getCode button{width: 40%; height: 48px; font-size: 14px; color: #555; margin-top: 0; position: absolute; top: 1px; right: 1px; background-color: #EEE;}
+#house-login .layui-form .register-btn{font-size: 18px; height: 42px; margin-top: 20px; width: 100%; background-color: #e8d6c0;}
+#house-login .layui-third-login{height: 20px;display: block;}
+#house-login .layui-third-login li{float:left;margin: 10px 5px;}
+#house-login .layui-third-login li i{font-size: 24px;cursor: pointer;}
+#house-login .layui-third-login li i:hover{opacity:0.8;filter(alpha=80)}
+#house-login .layui-third-login li .layui-icon-login-qq{color:rgb(107,197,254);}
+#house-login .layui-third-login li .layui-icon-login-wechat{color:rgb(9,197,4);}
+@media screen and (max-width: 768px){
+  .house-header .layui-container{height: 50px;}
+}
+
+
+@media screen and (max-width: 480px){
+
+}
+@media screen and (min-width: 768px){
+  .house-header .house-banner{position: relative; /*line-height: 95px*/;}
+  .house-header .house-banner a.banner{width: 130px;}
+  .house-header .house-banner a.shop{display: inline-block;}
+  body.scroll{padding-top: 50px;}
+  .house-header.scroll .house-banner{position: absolute; top: 0; line-height: 48px;}
+  .house-header.scroll .house-banner a.banner{width: 100px;}
+  .house-about p{font-size: 28px;}
+}
+@media screen and (min-width: 992px){
+
+}
+@media screen and (min-width: 1200px){
+
+}
+@media screen and (min-width: 1300px){
+  .layui-container{width: 1200px !important; padding: 0;}
+}
+@media \0screen{
+  .house-header{border-bottom: 1px solid #EEE;}
+}

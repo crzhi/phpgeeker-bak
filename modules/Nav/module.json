@@ -1,0 +1,14 @@
+{
+    "name": "Nav",
+    "alias": "nav",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Nav\\Providers\\NavServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

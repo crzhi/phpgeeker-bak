@@ -1,0 +1,416 @@
+/**
+
+ @Name：layuiAdmin 登入注册页
+ @Author：贤心
+ @Site：http://www.layui.com/admin/
+ @License：GPL-2
+ 
+ */
+ 
+html,body {
+	height:100%;
+    background-color: #f2f2f2;
+    color: #666;
+}
+.layui-icon-login-qq {
+    color: #3492ED;
+}
+.layui-icon-login-wechat {
+    color: #4DAF29;
+}
+.layui-layout-body {
+	overflow:auto;
+}
+.layui-icon-login-weibo {
+    color: #CF1900;
+}
+.layui-icon-login-github:before{
+	content: "\e664";
+}
+.layadmin-link {
+    color: #029789!important;
+}
+.butterBar {
+	margin-left: 36%;
+	max-width: 640px;
+	position: fixed;
+	text-align: center;
+	top: 0px;
+	width: 58%;
+	z-index: 1051
+}
+
+.butterBar-center {
+	left: 50%;
+	margin-left: -320px
+}
+
+.butterBar-message {
+	background: #cc5454;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0, 0, 0, 0.35);
+	display: inline-block;
+	font-size: 14px;
+	margin-bottom: 0;
+	padding: 12px 25px;
+	color: #fff;
+}
+
+.butterBar.is-active {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+	visibility: visible;
+}
+.github-login {
+	margin-top: 11px;
+}
+.login-tips{
+	margin-bottom: 20px;
+}
+.login-forget{
+	margin-top: 8px;
+}
+.passport-where {
+	margin-top: 5px;
+}
+#LAY-user-login,.layadmin-user-display-show {
+	display:block !important;
+}
+.layadmin-user-login {
+	position:relative;
+	left:0;
+	top:0;
+	padding:120px 0;
+	box-sizing:border-box;
+}
+.layadmin-user-login-main {
+	width:375px;
+	margin:0 auto;
+	box-sizing:border-box;
+}
+.layadmin-user-login-box {
+	padding:20px;
+}
+.layadmin-user-login-header {
+	text-align:center;
+}
+.layadmin-user-login-header h2 {
+	margin-bottom:10px;
+	font-weight:300;
+	font-size:30px;
+	color:#000;
+}
+.layadmin-user-login-header p {
+	font-weight:300;
+	color:#999;
+}
+.layadmin-user-login-body .layui-form-item {
+	position:relative;
+}
+.layadmin-user-login-icon {
+	position:absolute;
+	left:1px;
+	top:1px;
+	width:38px;
+	line-height:36px;
+	text-align:center;
+	color:#d2d2d2;
+}
+.layadmin-user-login-body .layui-form-item .layui-input {
+	padding-left:38px;
+}
+.layadmin-user-login-codeimg {
+	height:36px;
+	width:100%;
+	cursor:pointer;
+	box-sizing:border-box;
+}
+.layadmin-user-login-other {
+	position:relative;
+	font-size:0;
+	line-height:38px;
+}
+.layadmin-user-login-other>* {
+	display:inline-block;
+	vertical-align:middle;
+	margin-right:10px;
+	font-size:14px;
+}
+.layadmin-user-login-other .layui-icon {
+	position:relative;
+	top:2px;
+	font-size:26px;
+}
+.layadmin-user-login-other a:hover {
+	opacity:0.8;
+}
+.layadmin-user-jump-change {
+	float:right;
+}
+.layadmin-user-login-footer {
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	line-height:30px;
+	padding:20px;
+	text-align:center;
+	box-sizing:border-box;
+	color:rgba(0,0,0,.5)
+}
+.layadmin-user-login-footer span {
+	padding:0 5px;
+}
+.layadmin-user-login-footer a {
+	padding:0 5px;
+	color:rgba(0,0,0,.5);
+}
+.layadmin-user-login-footer a:hover {
+	color:rgba(0,0,0,1);
+}
+/* 有背景图时 */
+.layadmin-user-login-main[bgimg] {
+	background-color:#fff;
+	box-shadow:0 0 5px rgba(0,0,0,0.05);
+}
+/* 主题背景 */
+.ladmin-user-login-theme {
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	text-align:center;
+}
+.ladmin-user-login-theme ul {
+	display:inline-block;
+	padding:5px;
+	background-color:#fff;
+}
+.ladmin-user-login-theme ul li {
+	display:inline-block;
+	vertical-align:top;
+	width:64px;
+	height:43px;
+	cursor:pointer;
+	transition:all .3s;
+	-webkit-transition:all .3s;
+	background-color:#f2f2f2;
+}
+.ladmin-user-login-theme ul li:hover {
+	opacity:0.9
+}
+@media screen and (max-width:768px) {
+	.layadmin-user-login {
+	padding-top:60px;
+}
+.layadmin-user-login-main {
+	width:300px;
+}
+.layadmin-user-login-box {
+	padding:10px;
+}
+}.layui-header {
+	background-color:#fff!important;
+	box-shadow:0 2px 4px rgba(0,0,0,.04);
+}
+.layui-nav .layui-nav-item a {
+	color:#000
+}
+.layui-nav-bar {
+	display:none
+}
+.layui-header .layui-nav-item a:hover {
+	color:#000!important
+}
+.logo {
+	display:inline-block;
+	line-height:60px;
+	margin-left:20px;
+	color:#333;
+	text-decoration:none;
+	cursor:pointer;
+}
+.layui-layout-right {
+	background-color:#FFF;
+}
+.layui-nav-child {
+	min-width:100px;
+	max-width:100px;
+}
+.layui-nav-child dd {
+	text-align:center;
+}
+.layui-input-checkbox {
+	display:inline-block;
+	vertical-align:middle;
+	position:relative;
+	cursor:pointer;
+	font-size:0;
+	-webkit-transition:.1s linear;
+	transition:.1s linear;
+	box-sizing:border-box;
+	height:auto!important;
+	line-height:normal!important;
+	min-width:18px;
+	min-height:18px;
+	border:none!important;
+	margin-right:0;
+	padding-left:28px;
+	padding-right:0;
+	background:0 0;
+	margin-top:10px;
+}
+.layui-input-checkbox span {
+	display:inline-block;
+	vertical-align:middle;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	padding:0 10px;
+	height:100%;
+	font-size:14px;
+	border-radius:2px 0 0 2px;
+	background-color:#d2d2d2;
+	color:#fff;
+	overflow:hidden;
+	padding-left:0;
+	padding-right:15px;
+	line-height:18px;
+	background:0 0;
+	color:#666;
+}
+.layui-input-checkbox i {
+	display:inline-block;
+	vertical-align:middle;
+	position:absolute;
+	right:0;
+	top:0;
+	width:30px;
+	height:28px;
+	border:1px solid #d2d2d2;
+	border-left:none;
+	border-radius:0 2px 2px 0;
+	color:#fff;
+	font-size:20px;
+	text-align:center;
+	right:auto;
+	left:0;
+	width:16px;
+	height:16px;
+	line-height:16px;
+	border:1px solid #d2d2d2;
+	font-size:12px;
+	border-radius:2px;
+	background-color:#fff;
+	-webkit-transition:.1s linear;
+	transition:.1s linear;
+	background-color:#5FB878;
+	border-color:#5FB878;
+}
+.captcha{
+	margin-left: 10px;
+}
+.forget{
+	margin-top: 7px;
+}
+.tip-box{
+	margin-bottom: 20px;
+}
+
+.login_box{
+	width: 500px;
+	height: auto;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin: -200px 0 0 -250px;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 99999;
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	color: #777;
+	margin: -175px 0 0 -150px;
+}
+
+.box_center{
+	background-color: #fff;
+	border-radius: 6px;
+	z-index: 99999;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+	width: 300px;
+}
+
+.w_login_close {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-position: -696px -46px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    display: inline-block;
+	width: 13px;
+	height: 13px;
+	background-position: -696px -46px;
+	position: absolute;
+	right: 12px;
+	top: 12px;
+}
+
+.login_nav{
+	overflow: hidden;
+	width: 202px;
+	height: 40px;
+}
+
+.login_main {
+    min-width: 300px;
+    margin: auto;
+}
+
+.short_login {
+    width: 250px;
+    margin: auto;
+    overflow: hidden;
+    font-size: 14px;
+    width: 300px;
+	margin: 35px auto;
+}
+
+.wx_Qr_img {
+    width: 152px;
+    height: 152px;
+    margin: auto;
+    border: 1px solid #e0e0e0;
+    display: block;
+}
+
+.wx_Qr_box p {
+    text-align: center;
+    color: #43B908;
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+#globalPopMessageBg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	width: 100%;
+	height: 100%;
+	background: black;
+	filter: alpha(opacity=35);
+	-moz-opacity: 0.35;
+	-khtml-opacity: 0.35;
+	opacity: 0.35;
+	display: none
+}
